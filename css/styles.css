@@ -851,9 +851,9 @@ P .italic {
   -webkit-box-flex: column;
       -ms-flex: column;
           flex: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .navbar-form .brand {
@@ -877,6 +877,10 @@ P .italic {
 
 .navbar-form .navbar-menu a {
   display: none;
+}
+
+.navbar-form .hamburguer-button {
+  margin-right: 20px;
 }
 
 .footer-form {
@@ -925,7 +929,7 @@ P .italic {
 .wrapper-privacy {
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 
