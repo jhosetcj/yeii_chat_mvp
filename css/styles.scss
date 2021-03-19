@@ -197,12 +197,22 @@ P .italic {
 */
 .navbar{
     background-color: $c-white;
-    padding: 30px 17px;
+    padding: 15px 17px;
+    position: fixed;
+    width: 100%;
     .container{
         display: flex;
         flex: column;
         justify-content: space-between;
     }
+
+    .wrapper-mobile{
+        display: flex;
+        .hamburguer-button{
+            margin-right: 20px;
+        }
+    }
+
     .brand{
         display: flex;
         align-items: center;
@@ -221,7 +231,7 @@ P .italic {
 
 .hero{
     padding: 0px 17px;
-    margin-bottom: 50px;
+    padding-top: 80px;
     .container{
         display: grid;
         background-color: $c-grey_light;
@@ -253,7 +263,6 @@ P .italic {
 .story{
     padding: 0px 17px;
     .container-card-blur{
-        padding-bottom: 50px;
         .wrapper-index{
             display: flex;
             flex-direction: column;
@@ -283,9 +292,10 @@ P .italic {
                 background-color: rgba(228, 228, 228, 0.5); 
                 border-radius: 35px;
                 padding-top: 30px;
+                padding-bottom: 30px;
                 padding-left: 17px;
                 padding-right: 17px;
-                height: 380px;
+                height: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -296,107 +306,35 @@ P .italic {
                 p{
                     text-align: center;
                 }
-            }
-        }
-    }
-}
 
-
-.story-1{
-    .container{
-        padding-bottom: 110px;
-        .wrapper-blur{
-            .container{
                 .wrapper-image{
                     .mobile{
+                        margin-top: 20px;
                         width: 100%;
-                        z-index: +1;
-                        top: 215px;
-                        top: 10px;
-                        padding-top: 40px;
                     }
                 }
-                .circle-blue{
-                    width: 75px;
-                    height: 75px;
-                    background-color: $c-cyan_light;
-                    border-radius: 75px;
-                    position: absolute;
-                    z-index: -1;
-                    left: 40px;
-                    filter: blur(20px);
-                }
-                .circle-yellow{
-                    width: 166px;
-                    height: 166px;
-                    background-color: $c-yellow_light;
-                    border-radius: 166px;
-                    position: absolute;
-                    z-index: -1;
-                    left: 100px;
-                    filter: blur(20px);
-                }
-
-            }
-            
-        }
-    }
-}
-
-
-.story-2{
-    .container{
-        .wrapper-blur{
-            .container{  
-                .wrapper-image{
-                    display: flex;
-                    justify-content: center;
-                }
-                p{
-                    padding-bottom: 20px;
-                }
-
             }
         }
     }
 }
-
-
-.story-3{
-    .container{
-        .wrapper-blur{
-            .container{  
-                .wrapper-image{
-                    display: flex;
-                    justify-content: center;
-                }
-                p{
-                    padding-bottom: 20px;
-                }
-
-            }
-        }
-    }
-}
-
 
 .story-4{
-    .container{
-        .wrapper-blur{
-            .container{  
-                .wrapper-image{
-                    display: flex;
-                    justify-content: center;
-                }
-                p{
-                    padding-bottom: 20px;
-                }
-
-            }
-        }
-    }
+    margin-bottom: 100px;
 }
 
+
+.wrapper-line{
+    display: flex;
+    justify-content: center;
+    .line{
+        width: 2px;
+        height: 50px;
+        background-color: $c-grey_dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 .user-case{
     margin-top: 50px;
@@ -474,7 +412,7 @@ P .italic {
         padding-right: 17px;
         .wrapper-menu{
             padding-top: 50px;
-            padding-bottom: 90px;
+            padding-bottom: 80px;
             .container-menu{
                 display: grid;
                 grid-column-gap: 35px;
@@ -516,18 +454,50 @@ P .italic {
                 margin-bottom: 30px;
             }
 
-            img{
-                margin-bottom: 30px;
-
-            }
-            p{
-                font-family: Mulish;
-                color: $c-dark_light;
-                padding-bottom: 50px;
-                font-size: 14px;
-            }
+            .container{
+                display: flex;
+                justify-content: space-between;
+    
+                svg{
+                    margin-bottom: 30px;
+    
+                }
+                a{
+                    font-family: Mulish;
+                    color: $c-dark_light;
+                    padding-bottom: 50px;
+                    font-size: 14px;
+                    text-decoration: none;
+                }
+            }                       
         }
     }
+}
+
+.whatsapp-button{
+    border: solid 2px $c-cyan_dark;
+    border-radius: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 20px;
+
+    .container{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a{
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        color: $c-black;
+        margin-left: 10px;
+    }
+
 }
 
 
@@ -768,6 +738,10 @@ P .italic {
     }
 }
 
+.form-component{
+    width: 100%;
+}
+
 .navbar-form{
     background-color: $c-white;
     padding: 30px 17px;
@@ -792,11 +766,80 @@ P .italic {
 }
 
 
+.footer-form{
+    padding: 0px 17px;
+    margin-bottom: 30px;
+
+    .container{
+        background-color: $c-grey_light;
+        border-radius: 15px;
+        padding-left: 17px;
+        padding-right: 17px;
+
+        .wrapper-politics{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-family: Mulish;
+                font-weight: 600;
+                font-size: 15px;
+                text-align: center;
+                color: $c-black;
+            }
+        }
+
+    }
+}
+
+/*Aquí comienzan los estilos de la aviso page de yeii chat_____________________________________
+//Styles aviso page
+*/
+
+.wrapper-privacy{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 
+/*Aquí comienzan los estilos de la aviso page de yeii chat_____________________________________
+//Styles aviso page
+*/
 
+input[type="checkbox"]{
+    display: none;
+    &:not(:checked) + .ham-menu{
+        display: none;
+    }
+}
 
+.ham-menu{
+    position: fixed;
+    background-color: $c-white;
+    width: 100%;
+    height: 100%;
+    .container{
+        display: flex;
+        flex-direction: column;
 
+        a{
+            margin-top: 80px;
+            font-family: Montserrat;
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 1.25;
+            text-decoration:none;
+            color: $c-cyan_dark;
+        }
+    }
+}
 
 
 
@@ -884,7 +927,6 @@ P .italic {
         text-align: center;
         text-decoration: none;
         color: $c-white;
-        transition: background-color 1.5s ease;
     
         &:hover{
             cursor: pointer;
@@ -908,7 +950,6 @@ P .italic {
         text-align: center;
         text-decoration: none;
         color: $c-black;
-        transition: background-color 1.5s ease;
     
         &:hover{
             cursor: pointer;
@@ -932,7 +973,6 @@ P .italic {
         text-align: center;
         text-decoration: none;
         color: $c-black;
-        transition: background-color 1.5s ease;
     
         &:hover{
             cursor: pointer;
@@ -977,7 +1017,7 @@ P .italic {
     
                 &:hover{
                     cursor: pointer;
-                    color: $c-cyan;
+                    color: $c-cyan_dark;
                 }
             }
         }
@@ -1021,16 +1061,34 @@ P .italic {
 
     .story{
         .container-blur-1{
-            padding-bottom: 60px;
             .wrapper-blur{
                 display: flex;
                 justify-content: center;
                 .container{
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    grid-column-gap: 32px;
                     grid-template-areas: "wrapper-image" "wrapper-content";
-                    grid-template-columns: 2fr;
-                    min-width: 1080px;
+                    grid-template-columns: 2fr 2fr;
+                    max-width: 1080px;
+
+                    .wrapper-image{
+                        width: 50%;
+                    }
+                    
                     .wrapper-content{
-                        width: 508px;
+                        padding-bottom: 60px;
+                        width: 50%;
+                        padding-left: 56px;
+
+                        h2{
+                            text-align: left;
+                        }
+                        p{
+                            text-align: left;
+                            padding-bottom: 20px;
+                        }
                     }
                 }   
         
@@ -1042,11 +1100,11 @@ P .italic {
 
     .story{
         .container-blur-2{
-            padding-bottom: 60px;
             .wrapper-blur{
                 display: flex;
                 justify-content: center;
                 .container{
+                    padding: 0;
                     grid-column-gap: 32px;
                     grid-template-areas: "wrapper-image" "wrapper-content";
                     grid-template-columns: 2fr 2fr;
@@ -1073,46 +1131,11 @@ P .italic {
         }
     }
 
+    .wrapper-line{
 
-    .story-1{
-        .container-blur-1{
-            margin-bottom: 180px;
-            .wrapper-blur{
-                .container{
-                    .circle-blue{
-                        left: 250px;
-                    }
-                    .circle-yellow{
-                        left: 300px;
-                    }
+        .line{
+            height: 100px;
 
-                }
-                
-            }
-            .wrapper-image{
-                display: flex;
-                align-items: center;
-                .desktop{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 508px; 
-                    z-index: +1;
-                    margin: auto; 
-                    padding-top: 40px;               
-                }
-            }
-            
-        }
-    }
-
-
-    .story-3{
-        .container{
-            .wrapper-image{
-                position: absolute;
-                padding-top: 150px;
-            }
         }
     }
 
@@ -1188,7 +1211,12 @@ P .italic {
                     grid-template-columns: 2fr 2fr 2fr 2fr;
                     grid-template-rows: 0;
                     
-
+                    a{
+                        &:hover{
+                            cursor: pointer;
+                            color: $c-cyan_dark;
+                        }
+                    }
                 }
             }
             .wrapper-politics{
@@ -1200,12 +1228,17 @@ P .italic {
                     display: flex;
                     justify-content: space-between;
 
-                    img{
+                    svg{
                         width: 78.7px;
                         height: 30px;
                     }
-                    p{
+                    a{
                         text-align: right;
+
+                        &:hover{
+                            cursor: pointer;
+                            color: $c-cyan_dark;
+                        }
                     }
 
                 }
@@ -1284,10 +1317,20 @@ P .italic {
         .container{
             max-width: 1048px;
             .wrapper-list{
-                display: flex;
+                .container-list{
+                    display: flex;
+                    align-items: center;
+                    .image{
+                        .desktop{
+                            width: auto;
+                        }
+                    }
+                    .list{
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
             }
-
-
         }
     }
 
@@ -1378,6 +1421,46 @@ P .italic {
                 }
             }
         }
+    }
+
+    .footer-form{
+        padding: 0px 17px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+
+    
+        .container{
+            background-color: $c-grey_light;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 1182px;
+    
+            .wrapper-politics{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+    
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    font-family: Mulish;
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-align: center;
+                    color: $c-black;
+                }
+            }
+        }
+    }
+
+    .wrapper-privacy{
+        padding-left: 180px;
+        padding-right: 180px;
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 }
 

@@ -209,7 +209,9 @@ P .italic {
 */
 .navbar {
   background-color: #FFFFFF;
-  padding: 30px 17px;
+  padding: 15px 17px;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar .container {
@@ -222,6 +224,16 @@ P .italic {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.navbar .wrapper-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .wrapper-mobile .hamburguer-button {
+  margin-right: 20px;
 }
 
 .navbar .brand {
@@ -249,7 +261,7 @@ P .italic {
 
 .hero {
   padding: 0px 17px;
-  margin-bottom: 50px;
+  padding-top: 80px;
 }
 
 .hero .container {
@@ -287,10 +299,6 @@ P .italic {
 
 .story {
   padding: 0px 17px;
-}
-
-.story .container-card-blur {
-  padding-bottom: 50px;
 }
 
 .story .container-card-blur .wrapper-index {
@@ -336,9 +344,10 @@ P .italic {
   background-color: rgba(228, 228, 228, 0.5);
   border-radius: 35px;
   padding-top: 30px;
+  padding-bottom: 30px;
   padding-left: 17px;
   padding-right: 17px;
-  height: 380px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,43 +369,16 @@ P .italic {
   text-align: center;
 }
 
-.story-1 .container {
-  padding-bottom: 110px;
-}
-
-.story-1 .container .wrapper-blur .container .wrapper-image .mobile {
+.story .container-card-blur .wrapper-blur .container .wrapper-image .mobile {
+  margin-top: 20px;
   width: 100%;
-  z-index: +1;
-  top: 215px;
-  top: 10px;
-  padding-top: 40px;
 }
 
-.story-1 .container .wrapper-blur .container .circle-blue {
-  width: 75px;
-  height: 75px;
-  background-color: rgba(45, 244, 244, 0.5);
-  border-radius: 75px;
-  position: absolute;
-  z-index: -1;
-  left: 40px;
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
+.story-4 {
+  margin-bottom: 100px;
 }
 
-.story-1 .container .wrapper-blur .container .circle-yellow {
-  width: 166px;
-  height: 166px;
-  background-color: rgba(251, 208, 32, 0.5);
-  border-radius: 166px;
-  position: absolute;
-  z-index: -1;
-  left: 100px;
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
-}
-
-.story-2 .container .wrapper-blur .container .wrapper-image {
+.wrapper-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,34 +387,19 @@ P .italic {
           justify-content: center;
 }
 
-.story-2 .container .wrapper-blur .container p {
-  padding-bottom: 20px;
-}
-
-.story-3 .container .wrapper-blur .container .wrapper-image {
+.wrapper-line .line {
+  width: 2px;
+  height: 50px;
+  background-color: #c0c8ce;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.story-3 .container .wrapper-blur .container p {
-  padding-bottom: 20px;
-}
-
-.story-4 .container .wrapper-blur .container .wrapper-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.story-4 .container .wrapper-blur .container p {
-  padding-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .user-case {
@@ -527,7 +494,7 @@ P .italic {
 
 .footer .container .wrapper-menu {
   padding-top: 50px;
-  padding-bottom: 90px;
+  padding-bottom: 80px;
 }
 
 .footer .container .wrapper-menu .container-menu {
@@ -570,15 +537,56 @@ P .italic {
   margin-bottom: 30px;
 }
 
-.footer .container .wrapper-politics img {
+.footer .container .wrapper-politics .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .container .wrapper-politics .container svg {
   margin-bottom: 30px;
 }
 
-.footer .container .wrapper-politics p {
+.footer .container .wrapper-politics .container a {
   font-family: Mulish;
   color: #535456;
   padding-bottom: 50px;
   font-size: 14px;
+  text-decoration: none;
+}
+
+.whatsapp-button {
+  border: solid 2px #45B0C8;
+  border-radius: 30px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 20px;
+}
+
+.whatsapp-button .container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.whatsapp-button a {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  margin-left: 10px;
 }
 
 /*Aquí comienzan los estilos del asesor page de yeii chat_____________________________________
@@ -827,6 +835,10 @@ P .italic {
   color: #FFFFFF;
 }
 
+.form-component {
+  width: 100%;
+}
+
 .navbar-form {
   background-color: #FFFFFF;
   padding: 30px 17px;
@@ -865,6 +877,94 @@ P .italic {
 
 .navbar-form .navbar-menu a {
   display: none;
+}
+
+.footer-form {
+  padding: 0px 17px;
+  margin-bottom: 30px;
+}
+
+.footer-form .container {
+  background-color: #F0F2F2;
+  border-radius: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.footer-form .container .wrapper-politics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+.footer-form .container .wrapper-politics a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-family: Mulish;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  color: #000;
+}
+
+/*Aquí comienzan los estilos de la aviso page de yeii chat_____________________________________
+//Styles aviso page
+*/
+.wrapper-privacy {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*Aquí comienzan los estilos de la aviso page de yeii chat_____________________________________
+//Styles aviso page
+*/
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:not(:checked) + .ham-menu {
+  display: none;
+}
+
+.ham-menu {
+  position: fixed;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+}
+
+.ham-menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ham-menu .container a {
+  margin-top: 80px;
+  font-family: Montserrat;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #45B0C8;
 }
 
 /*Aquí comienan los media queries y quier hacer más notable la sección 
@@ -942,8 +1042,6 @@ P .italic {
     text-align: center;
     text-decoration: none;
     color: #FFFFFF;
-    -webkit-transition: background-color 1.5s ease;
-    transition: background-color 1.5s ease;
   }
   .button-dark:hover {
     cursor: pointer;
@@ -973,8 +1071,6 @@ P .italic {
     text-align: center;
     text-decoration: none;
     color: #000;
-    -webkit-transition: background-color 1.5s ease;
-    transition: background-color 1.5s ease;
   }
   .button-light-b:hover {
     cursor: pointer;
@@ -1004,8 +1100,6 @@ P .italic {
     text-align: center;
     text-decoration: none;
     color: #000;
-    -webkit-transition: background-color 1.5s ease;
-    transition: background-color 1.5s ease;
   }
   .button-light-y:hover {
     cursor: pointer;
@@ -1057,7 +1151,7 @@ P .italic {
   }
   .navbar .navbar-menu a:hover {
     cursor: pointer;
-    color: #4DCFCF;
+    color: #45B0C8;
   }
   .navbar .cta {
     display: -webkit-box;
@@ -1106,9 +1200,6 @@ P .italic {
   .hero .container .wrapper-content p {
     padding-bottom: 30px;
   }
-  .story .container-blur-1 {
-    padding-bottom: 60px;
-  }
   .story .container-blur-1 .wrapper-blur {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1118,16 +1209,34 @@ P .italic {
             justify-content: center;
   }
   .story .container-blur-1 .wrapper-blur .container {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    grid-column-gap: 32px;
         grid-template-areas: "wrapper-image" "wrapper-content";
-    -ms-grid-columns: 2fr;
-        grid-template-columns: 2fr;
-    min-width: 1080px;
+    -ms-grid-columns: 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
+    max-width: 1080px;
+  }
+  .story .container-blur-1 .wrapper-blur .container .wrapper-image {
+    width: 50%;
   }
   .story .container-blur-1 .wrapper-blur .container .wrapper-content {
-    width: 508px;
-  }
-  .story .container-blur-2 {
     padding-bottom: 60px;
+    width: 50%;
+    padding-left: 56px;
+  }
+  .story .container-blur-1 .wrapper-blur .container .wrapper-content h2 {
+    text-align: left;
+  }
+  .story .container-blur-1 .wrapper-blur .container .wrapper-content p {
+    text-align: left;
+    padding-bottom: 20px;
   }
   .story .container-blur-2 .wrapper-blur {
     display: -webkit-box;
@@ -1138,6 +1247,7 @@ P .italic {
             justify-content: center;
   }
   .story .container-blur-2 .wrapper-blur .container {
+    padding: 0;
     grid-column-gap: 32px;
         grid-template-areas: "wrapper-image" "wrapper-content";
     -ms-grid-columns: 2fr 2fr;
@@ -1166,41 +1276,8 @@ P .italic {
     text-align: left;
     padding-bottom: 20px;
   }
-  .story-1 .container-blur-1 {
-    margin-bottom: 180px;
-  }
-  .story-1 .container-blur-1 .wrapper-blur .container .circle-blue {
-    left: 250px;
-  }
-  .story-1 .container-blur-1 .wrapper-blur .container .circle-yellow {
-    left: 300px;
-  }
-  .story-1 .container-blur-1 .wrapper-image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .story-1 .container-blur-1 .wrapper-image .desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 508px;
-    z-index: +1;
-    margin: auto;
-    padding-top: 40px;
-  }
-  .story-3 .container .wrapper-image {
-    position: absolute;
-    padding-top: 150px;
+  .wrapper-line .line {
+    height: 100px;
   }
   .user-case {
     display: -webkit-box;
@@ -1307,6 +1384,10 @@ P .italic {
     -ms-grid-rows: 0;
         grid-template-rows: 0;
   }
+  .footer .container .wrapper-menu .container-menu a:hover {
+    cursor: pointer;
+    color: #45B0C8;
+  }
   .footer .container .wrapper-politics {
     padding-left: 67px;
     padding-right: 67px;
@@ -1321,12 +1402,16 @@ P .italic {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .footer .container .wrapper-politics .container img {
+  .footer .container .wrapper-politics .container svg {
     width: 78.7px;
     height: 30px;
   }
-  .footer .container .wrapper-politics .container p {
+  .footer .container .wrapper-politics .container a {
     text-align: right;
+  }
+  .footer .container .wrapper-politics .container a:hover {
+    cursor: pointer;
+    color: #45B0C8;
   }
   .beneficios {
     padding: 0;
@@ -1417,10 +1502,20 @@ P .italic {
   .producto .container {
     max-width: 1048px;
   }
-  .producto .container .wrapper-list {
+  .producto .container .wrapper-list .container-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .producto .container .wrapper-list .container-list .image .desktop {
+    width: auto;
+  }
+  .producto .container .wrapper-list .container-list .list {
+    margin: 0;
+    padding: 0;
   }
   .form-section .container .copy {
     margin-top: 100px;
@@ -1513,6 +1608,54 @@ P .italic {
   .form-section .container .form .button-form:hover {
     cursor: pointer;
     background-color: #F8B60B;
+  }
+  .footer-form {
+    padding: 0px 17px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-form .container {
+    background-color: #F0F2F2;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1182px;
+  }
+  .footer-form .container .wrapper-politics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px;
+  }
+  .footer-form .container .wrapper-politics a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+    font-family: Mulish;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+  }
+  .wrapper-privacy {
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
